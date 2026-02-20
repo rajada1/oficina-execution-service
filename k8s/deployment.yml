@@ -28,15 +28,15 @@ spec:
                 secretKeyRef:
                   name: execution-service-secrets
                   key: jwt-secret
-            - name: POSTGRES_HOST
+            - name: DB_HOST
               value: "postgresql.default.svc.cluster.local"
-            - name: POSTGRES_PORT
+            - name: DB_PORT
               value: "5432"
-            - name: POSTGRES_DB
+            - name: DB_NAME
               value: "execution_db"
-            - name: POSTGRES_USER
+            - name: DB_USERNAME
               value: "postgres"
-            - name: POSTGRES_PASSWORD
+            - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: execution-service-secrets
